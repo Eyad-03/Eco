@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import api from "../api.js"; // axios instance with withCredentials: true
+import api from "../api.js";
 import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext();
@@ -65,7 +65,7 @@ export function UserProvider({ children }) {
       const res = await api.post("/auth/login", userData);
       toast.success(res.data.message || "Login Successful");
       await currentUser();
-      if (res.data.user.role === "manager") navigate("/manager/dashboard");
+      if (res.data.user.role === "admin") navigate("/dashboard-admin");
       if (res.data.user.role === "user") navigate("/");
     } catch (err) {
       console.log(err);

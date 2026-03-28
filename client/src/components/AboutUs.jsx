@@ -8,9 +8,11 @@ import {
 } from "@mui/material";
 import { Image } from "mui-image";
 import Banner from "../image/Banner.png";
+import NavBar from "./Shared/NavBar";
 function AboutUs() {
   return (
     <>
+    <NavBar/>
     <Box display="flex">
       <Box margin="150px 0px 0px 200px">
         <Box

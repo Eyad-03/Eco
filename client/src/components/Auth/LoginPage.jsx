@@ -126,7 +126,7 @@ function LoginPage() {
 
         <Box
           sx={{
-            display: { xs: "none", md: "block" }, // Hidden on extra-small (mobile), visible on medium and up
+            display: { xs: "none", md: "block" },
           }}
         >
           <img src={cat} style={{ marginTop: "150px" }} />

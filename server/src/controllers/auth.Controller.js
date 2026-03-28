@@ -17,7 +17,6 @@ import {
 import { asyncHandler } from "../middleware/asyncHandler.Middleware.js";
 
 export const register = asyncHandler(async (req, res) => {
-
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
@@ -34,12 +33,10 @@ export const register = asyncHandler(async (req, res) => {
   if (!newUser)
     return res.status(400).json({ message: "Failed to create user" });
 
-  res
-    .status(201)
-    .json({
-      message: "User created successfully",
-      user: { userid: newUser.userid, name, email, role: "user" },
-    });
+  res.status(201).json({
+    message: "User created successfully",
+    user: { userid: newUser.userid, name, email, role: "user" },
+  });
 });
 
 export const login = asyncHandler(async (req, res) => {

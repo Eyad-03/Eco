@@ -1,5 +1,5 @@
 export const asyncHandler = (asyncFunction) => {
-    return (req, res, next) => {
-        Promise.resolve(asyncFunction(req, res, next)).catch(next)
-    }
-}
+  return (req, res, next) => {
+    Promise.resolve(asyncFunction(req, res, next)).catch(next);
+  };
+};

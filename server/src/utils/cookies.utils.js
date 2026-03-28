@@ -2,7 +2,7 @@
 export const setAccessTokenCookie = (res, token) => {
     res.cookie("accessToken", token, {
         httpOnly: true,
-        secure: false, //true in development, but false in production
+        secure: false, 
         sameSite: "Lax",
         maxAge: 24 * 60 * 60 * 1000
     })
