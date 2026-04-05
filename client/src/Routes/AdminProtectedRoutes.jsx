@@ -4,7 +4,7 @@ import { UserContext } from "../Context/UserContext";
 import { useContext } from "react";
 function AdminProtectRoutes({ children }) {
   const { user, loading } = useContext(UserContext);
-  console.log("user from manager prtocted routes", user);
+  console.log("user from manager protected routes", user);
   if (loading) {
     return <Typography>loading...</Typography>;
   }
